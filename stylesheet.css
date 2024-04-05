@@ -1,0 +1,228 @@
+@font-face {
+    font-family: HeaderPUP;
+    src: url(assets/font.otf);
+}
+
+@font-face {
+    font-family: Lyrics;
+    src: url(assets/lyrics.ttf);
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+h1 {
+    font-family: HeaderPUP;
+    font-size: 26pt;
+    text-align: center;
+    color: rgb(116, 0, 0);
+    text-shadow: 0px 0px 15px rgba(216, 216, 216, 0.705);
+}
+
+audio {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 3%;
+    width: 65%;
+    opacity: 75%;
+}
+
+main {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    width: 80%;
+}
+
+footer {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: 'HeaderPUP';
+    font-size: 10pt;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(96, 96, 96); 
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(128, 0, 0); 
+    border-radius: 10px;
+    box-shadow: 0px 0px 2px rgba(128, 0, 0, 0.253);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(116, 0, 0); 
+}
+
+#bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: url(assets/pylon2022.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 70%;
+    z-index: -2;
+}
+
+#bg_overlay{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.20);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+
+#main_header {
+    height: 15%;
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-top: 1%;
+    display: flex;
+}
+
+#logo {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 90px;
+    width: 90px;
+}
+
+#h_text {
+    margin-left: 10px;
+}
+
+#h_textdiv {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#title {
+    font-family: HeaderPUP;
+    font-weight: bolder;
+    color: rgb(116, 0, 0);
+    font-size: 12pt;
+    margin: 0;
+}
+
+#subtitle {
+    font-family: HeaderPUP;
+    font-weight: bolder;
+    color: rgb(37, 37, 37);
+    font-size: 10pt;
+    margin: 0;
+}
+
+#parent_frame {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 325px;
+    width: 100%;
+    margin-top: 2%;
+}
+
+#lyric_cont {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 325px;
+    overflow-y: scroll;
+}
+
+#footer_cont {
+    position: fixed;
+    bottom: 0;
+    margin: auto;
+    height: 4%;
+    width: 100%;
+    background-color: hsla(0, 0%, 81%, 0.604);
+}
+
+.lyric {
+    position: relative;
+    vertical-align: center;
+    text-align: center;
+    font-family: 'Lyrics';
+    font-size: 15pt;
+    font-weight: bold;
+    color: white;
+    opacity: 30%;
+    text-shadow: 0px 0px 20px rgb(216, 216, 216)
+}
+
+.lyric_hl {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    vertical-align: center;
+    text-align: center;
+    font-family: 'Lyrics';
+    font-size: 24pt;
+    font-weight: bold;
+    width: 82%;
+    color: white;
+    text-shadow: 0px 0px 20px rgba(40, 40, 40, 0.773);
+
+}
+
+@media only screen and (max-width: 768px) and (min-width: 100px) {
+    footer {
+        font-size: 8pt;
+    }
+    
+    audio {
+        width: 80%;
+    }
+
+    main {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+
+    #main_header {
+        margin-top: 2.5%;
+    }
+
+    #logo {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #h_text {
+        display: none;
+    }
+
+    .lyric {
+        font-size: 10pt;
+    }
+
+    .lyric_hl {
+        font-size: 14pt;
+    }
+}

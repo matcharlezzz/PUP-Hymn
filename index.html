@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="icon" href="assets/PUPLogo.png" />
+    <title>BANDALA, CHARLES ANDRE C - PUP HYMN</title>
+</head>
+<body>
+    <div id="bg"></div>
+    <div id="bg_overlay"></div>
+    <div id="main_header">
+        <img id="logo" src="assets/PUPLogo.png" alt="PUP Logo">
+        <div id="h_text">
+            <div id="h_textdiv">
+                <p id="title">POLYTECHNIC UNIVERSITY OF THE PHILIPPINES</p>
+                <p id="subtitle">The Country's 1st PolytechnicU</p>
+            </div>
+        </div>
+    </div>
+    <main>
+        <h1>The PUP Hymn</h1>
+        <div id="parent_frame">
+            <div id="lyric_cont"></div>
+        </div>
+        <audio id='hymn' src="assets/hymn.mp3" ontimeupdate="lyricScroll();" controls="true"></audio>
+    </main>
+
+    <div id="footer_cont">
+        <footer>Copyright © 2017 Polytechnic University of the Philippines</footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
