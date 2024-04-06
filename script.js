@@ -43,9 +43,12 @@ function lyricScroll(){
         if(i == lyric_list.length - 1){
             const curr_lyric = lyric_cont.querySelector('.lyric_hl');
             if(curr_lyric){
-                curr_lyric.classList.remove('lyric_hl');
-                curr_lyric.classList.add('lyric');
-                lyric_cont.children[0].scrollIntoView({behavior: 'smooth', block: 'center'});
+                unhlLyric(curr_lyric);
+                lyric_cont.children[0].scrollIntoView(
+                    {
+                        behavior: 'smooth', 
+                        block: 'center'
+                    });
             }
             break;
         }
@@ -54,15 +57,23 @@ function lyricScroll(){
             if (i !== curr_idx){
                 const curr_lyric = lyric_cont.querySelector('.lyric_hl');
                 if (curr_lyric){
-                    curr_lyric.classList.remove('lyric_hl');
-                    curr_lyric.classList.add('lyric');
+                    unhlLyric(curr_lyric);
                 }
-                lyric_cont.children[i].classList.remove('lyric');
-                lyric_cont.children[i].classList.add('lyric_hl');
+                hlLyric(lyric_cont.children[i]);
                 lyric_cont.children[i].scrollIntoView({behavior: 'smooth', block: 'center'});
                 curr_idx = i;
             }
             break;
         }
     }
+}
+
+function hlLyric(document){
+    document.classList.remove('lyric');
+    document.classList.add('lyric_hl');
+}
+
+function unhlLyric(document){
+    document.classList.remove('lyric_hl');
+    document.classList.add('lyric');
 }
